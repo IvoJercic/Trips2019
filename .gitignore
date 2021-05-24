@@ -48,5 +48,5 @@ Thumbs.db
 firebase.json
 database.rules.json
 firestore.rules
-/src/enviroments/environment.prod.ts
-/src/enviroments/environment.ts
+/src/enviroments/enviroments
+/src/enviroments/enviroments
