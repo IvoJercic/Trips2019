@@ -1,0 +1,92 @@
+<body>
+    <div class="h1">
+        <a [routerLink]="['/menu']">
+            <button class="btn btn-dark" style="margin-left:30px;margin-right: 15px"><i class="fa fa-arrow-left"></i></button>
+        </a>
+        &nbsp;&nbsp;Izvlacenja &nbsp;
+    </div>
+    <hr>
+    <table id="tablica" align="center" class="table table-striped">
+        <tr>
+            <th>#</th>
+            <th>Vrsta</th>
+            <th>Izvlacenja</th>
+        </tr>
+        <tr *ngFor="let tura of nizTuraSI">
+            <td><button class='btn btn-dark' id="btn{{tura.RedniBroj}}" (click)="open(content,tura)">{{tura.RedniBroj}}</button></td>
+            <td>{{tura.Vrsta}}</td>
+            <td>{{tura.Izvlacenja}}</td>
+        </tr>
+    </table>
+
+    <ng-template #content let-modal>
+            <div class="modal-header" >
+                    <h2 align="center" style="margin-left:14%;  font-family: 'Patua One', cursive;" id="modal-basic-title"></h2>
+                  <button type="button" class="close" aria-label="Close" (click)="modal.dismiss('Cross click')">
+                   <span aria-hidden="true">&times;</span>
+                  </button>
+            </div>
+            <div class="modal-body">
+                <table id="podaci" class="table table-striped">
+                    <tr>
+                        <th>Datum: </th>
+                        <td id="lblDatum"></td>
+                    </tr>
+                    <tr>
+                        <th>Vrijeme: </th>
+                        <td id="lblVrijeme">    
+                         </td>
+                      </tr>
+                    <tr>
+                        <th>Vrsta: </th>
+                        <td id="lblVrsta">   
+                         </td>
+                    </tr>
+                    <tr>
+                        <th>Placa: </th>
+                        <td id="lblPlaca">   
+                        </td>
+                    </tr>
+                    <tr>
+                        <th>Baksis: </th>
+                        <td id="lblBaksis">   
+                        </td>
+                    </tr>
+                    <tr>
+                        <th>Slike: </th>
+                        <td id="lblSlike">   
+                        </td>
+                    </tr>
+                    <tr>
+                        <th>Voznja: </th>
+                        <td id="lblVoznja">
+                        </td>
+                    </tr>
+                    <tr>
+                        <th>Gosti: </th>
+                        <td id="lblGosti">                            
+                        </td>
+                    </tr>
+                    <tr>
+                        <th>Izvlacenja: </th>
+                        <td id="lblIzvlacenja">
+                        </td>
+                    </tr>
+                    <tr>
+                        <th>Kolege: </th>
+                        <td id="lblKolege">
+                        </td>
+                    </tr>
+                    <tr>
+                        <th>Ukupno: </th>
+                        <td  id="lblUkupno"style="font-weight: bold">
+                        </td>
+                    </tr>                
+                </table>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-outline-dark" id="btnZatvori" (click)="modal.close('Save click')" style="font-family:'Patua One', cursive">Zatvori</button>
+            </div>
+        </ng-template>
+</body>
+    

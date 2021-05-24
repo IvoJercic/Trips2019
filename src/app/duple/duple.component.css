@@ -1,0 +1,39 @@
+.h1
+{
+  font-family: 'Patua One', cursive;
+  color: black;
+  text-align: left;
+}
+
+h3
+{
+  font-family: 'Patua One', cursive;
+  color: black;
+  margin-left: 5%;
+}
+
+canvas
+{
+  width: 101%;
+  
+}
+body
+{
+    background-color:#ffc107;
+    font-family: 'Patua One', cursive;
+}
+
+#tablica
+{
+  font-family: 'Patua One', cursive;
+  width: 90%;
+}
+
+td
+{
+  font-family: 'Patua One', cursive;
+}
+#podaci
+{
+  font-family: 'Patua One', cursive;
+}

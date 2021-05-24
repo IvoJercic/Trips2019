@@ -1,0 +1,99 @@
+<div class="app" ><!--Div postavljen isključivo da cila pozadina bez rupa bude obojana-->
+    <div class="h1">
+        <a [routerLink]="['/menu']">
+          <button class="btn btn-dark" style="margin-left:30px;margin-right: 15px"><i class="fa fa-arrow-left"></i></button>
+        </a>
+      Nova tura #{{ukupnoTura+1}} &nbsp;
+    </div>        <hr>
+    <table class="table table-striped" id="tablica">
+            <tr>
+              <th> <label for="datumTure" >Datum :</label></th>
+              <td>
+                <input type="date" class="form-control" id="datumTure">
+              </td>
+            </tr>
+            <tr>
+              <th> <label for="vrijemeTure" >Vrijeme :</label></th>
+              <td>
+                <input type="time" class="form-control" id="vrijemeTure" value="10:23 AM" >
+              </td>
+            </tr>
+            <tr>
+                <th> <label for="vrstaTure" >Vrsta :</label></th>
+                <td>
+                  <select class="form-control" id="vrstaTure" >
+                    <option value="x" selected>Odaberi...</option>
+                    <option value="CanBas">Canyoning (Basic)</option>
+                    <option value="CanAdv">Canyoning (Advanced)</option>
+                    <option value="Cyc">Cycling</option>
+                    <option value="Kay">Kayaking</option>
+                    <option value="RCli">Rock climbing</option>
+                    <option value="Hik">Hiking</option>
+                </select>
+                </td>
+              </tr>
+              <tr>
+                <th> <label for="placaTure" >Plaća :</label></th>
+                <td>
+                  <input class="form-control" type="number" id="placaTure" placeholder="Unesite broj"/>
+                </td>
+              </tr>
+              <tr>
+                <th> <label for="baksisTure" >Bakšiš :</label></th>
+                <td>
+                  <input class="form-control" type="number" id="baksisTure" value="0"/>
+                </td>
+              </tr>
+              <tr>
+                <th> <label for="slikeTure" >Od slika :</label></th>
+                <td>
+                  <input class="form-control" type="number" id="slikeTure" value="0"/>
+                </td>
+              </tr>
+              <tr>
+                <th> <label for="voznjaTure" >Od vožnje :</label></th>
+                <td>
+                  <input class="form-control" type="number" id="voznjaTure" value="0"/>
+                </td>
+              </tr>
+              <tr>
+                <th> <label for="brojGostijuTure" >Gostiju :</label></th>
+                <td>
+                  <input class="form-control" type="number" id="brojGostijuTure"placeholder="Unesite broj"/>
+                </td>
+              </tr>
+              <tr>
+                <th>
+                  <label for="izvlacenjaTure" >Izvlačenja :</label>
+                </th>
+                <td>
+                  <input class="form-control" type="number" id="izvlacenjaTure" value="0"/>
+                </td>
+              </tr>
+
+              <tr>
+                <th> <label for="kolegeTura" >Zajedno sa :</label></th>
+                <td>
+                  <div id="kolegeTura">
+                    <input type="checkbox" value="Solo" id="Solo" (change)="iskljuciKolege()"> Solo
+                    <input type="checkbox" value="IvoJ" id="IvoJ" (change)="iskljuciSolo()"> IvoJ
+                    <input type="checkbox" value="IvoB" id="IvoB" (change)="iskljuciSolo()"> Ivo B.
+                    <br>
+                    <input type="checkbox" value="Jerko" id="Jerko" (change)="iskljuciSolo()"> Jerko
+                    <input type="checkbox" value="Junto" id="Junto" (change)="iskljuciSolo()"> Junto
+                    <input type="checkbox" value="Toni" id="Toni" (change)="iskljuciSolo()"> Toni
+                    <br>
+                    <input type="checkbox" value="Mata" id="Mata" (change)="iskljuciSolo()"> Mata
+                    <input type="checkbox" value="AnteK" id="AnteK" (change)="iskljuciSolo()"> Ante K.
+                    <input type="checkbox" value="Rata" id="Rata" (change)="iskljuciSolo()"> Rata
+                    <br>
+                  </div>
+                </td>
+              </tr>
+          </table>
+          <hr>
+          <div align="center">
+            <button id="btnPotvrdi" (click)="provjeraUnosa()" class="btn btn-dark">Potvrdi</button>
+            <hr>          
+          </div>  
+</div>

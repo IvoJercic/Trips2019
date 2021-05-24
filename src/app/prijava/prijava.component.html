@@ -1,0 +1,49 @@
+<body>
+    <div class="tab">
+        <button class="tablinks" id="lblPrijava" (click)="openTab('prijava')"><i class="fa fa-sign-in"></i> Prijavi se</button>
+        <button class="tablinks" id="lblRegistracija" (click)="openTab('registracija')"><i class="fa fa-user-plus"></i> Registriraj se</button>
+        <button class="tablinks" id="lblPreuzmi" (click)="openTab('preuzmi')"><i class="fa fa-download"></i> Preuzmi</button>
+    </div>
+    <br>
+    <div id="prijava" class="tabcontent">
+        <h3>TRIPS 2019. - Prijava</h3>
+    <!-- Login Form -->
+        <form>
+            <input type="text" id="login" class="form-control" name="login" placeholder="Korisnicko ime  (E-mail)">
+            <input type="password" id="passwordPrijava" class="form-control" name="login" placeholder="Lozinka">
+            <br>
+            <div align="center">
+                <button class="btn btn-warning" id="btnPrijava" (click)="prijava()" disabled>Prijavi se</button>
+            </div>
+        </form>
+    </div>
+              
+    <div id="registracija" class="tabcontent">
+        <h3>TRIPS 2019. - Registracija</h3>
+
+        <!-- Register Form -->
+        <form>
+            <input type="text" id="register" class="form-control" name="login" placeholder="Novo korisnicko ime (E-mail)">
+            <input type="password" id="passwordRegistracija" class="form-control" name="login" placeholder="Nova lozinka">
+            <input type="password" id="passwordPonovljena" class="form-control" name="login" placeholder="Ponovljena nova lozinka">
+            <br>
+            <div align="center">
+                <button class="btn btn-warning" id="btnRegistracija" (click)="registracija()">Registriraj se</button>
+            </div>
+        </form>
+    </div>
+    <div id="preuzmi" class="tabcontent">
+        <h3>TRIPS 2019. - Preuzimanje</h3>
+
+        <!-- Download Form -->
+        <form>
+            <input type="text" id="loginPreuzmi" class="form-control" name="login" placeholder="Korisnicko ime  (E-mail)">
+            <input type="password" id="passwordPreuzmi" class="form-control" name="login" placeholder="Lozinka">
+            <br>
+            <div align="center">
+                <button class="btn btn-warning" id="btnPreuzmi" (click)="preuzmi()" disabled>Preuzmi svoje podatke</button>
+            </div>
+        </form>
+    </div>
+    <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+</body>

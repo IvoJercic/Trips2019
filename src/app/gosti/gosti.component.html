@@ -1,0 +1,107 @@
+<body>
+<div class="h1">
+    <a [routerLink]="['/menu']">
+      <button class="btn btn-dark" style="margin-left:30px;margin-right: 30px"><i class="fa fa-arrow-left"></i></button>
+    </a>
+    &nbsp;&nbsp;&nbsp;&nbsp;Gosti &nbsp;
+</div>
+<hr>
+<div class="tab" align="center">
+  <button style="margin-left: 23%" class="tablinks" id="lblPoVrsti" (click)="openTab('vrsta')">Po vrsti</button>
+  <button  class="tablinks" id="lblPoMjesecu" (click)="openTab('mjesec')">Po mjesecu</button>
+</div>
+
+<div id="vrsta" class="tabcontent">
+  <h3>Gosti po vrsti</h3>
+  <div align="center">
+    <table class="table table-striped" id="tablica">
+      <tr>
+        <th>Ukupno gostiju</th>
+        <td>{{gCanBas+gCanAdv+gKay+gHik+gCyc+gRCli}}</td>
+      </tr>
+      <tr>
+        <th>Canyoning (basic)</th>
+        <td>{{gCanBas}}</td>
+      </tr> 
+      <tr>
+        <th>Kayaking</th>
+        <td>{{gKay}}</td>
+      </tr>
+      <tr>
+        <th>Hiking</th>
+        <td>{{gHik}}</td>
+      </tr>
+      <tr>
+        <th>Cycling</th>
+        <td>{{gCyc}}</td>
+      </tr>
+      <tr>
+        <th>Canyoning (advanced)</th>
+        <td>{{gCanAdv}}</td>
+      </tr>
+      <tr>
+        <th>Rock climbing</th>
+        <td>{{gRCli}}</td>
+      </tr>
+    </table>
+  </div>
+  <hr>
+  <h3>Graficki prikaz</h3>
+  <div id="grafVrsta">
+    <canvas  id="pieChart" align="center"></canvas>
+  </div>
+</div>
+        
+<div id="mjesec" class="tabcontent">
+  <h3>Gosti po mjesecu</h3>
+  <div align="center">
+    <table class="table table-striped" id="tablica">
+      <tr>
+        <th>Ukupno gostiju</th>
+        <td>{{gCanBas+gCanAdv+gKay+gHik+gCyc+gRCli}}</td>
+      </tr>
+      <tr>
+        <th>Ozujak</th>
+        <td>{{podaciPoMjesecima[0]}}</td>
+      </tr>
+      <tr>
+        <th>Travanj</th>
+        <td>{{podaciPoMjesecima[1]}}</td>
+      </tr>
+      <tr>
+        <th>Svibanj</th>
+        <td>{{podaciPoMjesecima[2]}}</td>
+      </tr>
+      <tr>
+        <th>Lipanj</th>
+        <td>{{podaciPoMjesecima[3]}}</td>
+      </tr>
+      <tr>
+        <th>Srpanj</th>
+        <td>{{podaciPoMjesecima[4]}}</td>
+      </tr>
+      <tr>
+        <th>Kolovoz</th>
+        <td>{{podaciPoMjesecima[5]}}</td>
+      </tr>
+      <tr>
+        <th>Rujan</th>
+        <td>{{podaciPoMjesecima[6]}}</td>
+      </tr>
+      <tr>
+        <th>Listopad</th>
+        <td>{{podaciPoMjesecima[7]}}</td>
+      </tr>
+      <tr>
+        <th>Studeni</th>
+        <td>{{podaciPoMjesecima[8]}}</td>
+      </tr>
+    </table>    
+  </div>
+  <hr>
+    <h3>Graficki prikaz</h3>
+    <div id="grafMjesec">
+        <canvas id="lineChart"  style="width: 101%" align="center"></canvas>
+    </div>
+</div>
+</body>

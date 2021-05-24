@@ -1,0 +1,21 @@
+.app
+{
+    background-color:#ffc107;
+}
+
+.h1
+{
+    font-family: 'Patua One', cursive;
+    font-size: 35px;
+}
+
+#tablica
+{
+    font-family: 'Patua One', cursive;
+}
+
+#btnPotvrdi
+{
+    width:80%;
+    font-family: 'Patua One', cursive;
+}

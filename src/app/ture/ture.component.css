@@ -1,0 +1,57 @@
+.h1
+{
+  font-family: 'Patua One', cursive;
+  color: black;
+  text-align: left;
+}
+.a
+{
+    color:black;
+    font-family: Impact;
+}
+a:visited 
+{
+    font-family: Impact;
+    color: black;
+    margin:5px;
+}
+canvas
+{
+  width: 100%;
+}
+#vrstaTure
+{
+  font-family: 'Patua One', cursive;
+  background:black;
+  color:orange
+}
+
+.app
+{
+  background-color:#ffc107;
+}
+
+
+h6
+{
+  font-family: 'Patua One', cursive;
+}
+#modal-basic-title
+{
+  font-family: 'Patua One', cursive;
+  font-size: 17px;
+  color: black;
+  text-align: center;
+}
+
+#podaci
+{
+  font-family: 'Patua One', cursive;
+  font-size: 17px;
+  color: black;
+}
+
+input
+{
+  width: 150px;
+}

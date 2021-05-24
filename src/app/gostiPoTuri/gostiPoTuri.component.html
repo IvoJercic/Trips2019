@@ -1,0 +1,107 @@
+<body>
+<div class="h1">
+    <a [routerLink]="['/menu']">
+      <button class="btn btn-dark" style="margin-left:30px;margin-right: 1px"><i class="fa fa-arrow-left"></i></button>
+    </a>
+    &nbsp;&nbsp;&nbsp;&nbsp;Gosti %&nbsp;
+</div>
+<hr>
+<div class="tab" align="center">
+  <button style="margin-left: 23%" class="tablinks" id="lblPoVrsti" (click)="openTab('vrsta')">Po vrsti</button>
+  <button  class="tablinks" id="lblPoMjesecu" (click)="openTab('mjesec')">Po mjesecu</button>
+</div>
+
+<div id="vrsta" class="tabcontent">
+  <h3>Prosjek gostiju po vrsti</h3>
+  <div align="center">
+    <table class="table table-striped" id="tablica">
+      <tr>
+        <th>Prosjek gostiju</th>
+        <td>{{prosjekGostiju}}</td>
+      </tr>
+      <tr>
+        <th>Canyoning (basic)</th>
+        <td>{{prosjekGostijuPoVrstiTure[0]}}</td>
+      </tr> 
+      <tr>
+        <th>Kayaking</th>
+        <td>{{prosjekGostijuPoVrstiTure[2]}}</td>
+      </tr>
+      <tr>
+        <th>Hiking</th>
+        <td>{{prosjekGostijuPoVrstiTure[3]}}</td>
+      </tr>
+      <tr>
+        <th>Cycling</th>
+        <td>{{prosjekGostijuPoVrstiTure[4]}}</td>
+      </tr>
+      <tr>
+        <th>Canyoning (advanced)</th>
+        <td>{{prosjekGostijuPoVrstiTure[1]}}</td>
+      </tr>
+      <tr>
+        <th>Rock climbing</th>
+        <td>{{prosjekGostijuPoVrstiTure[5]}}</td>
+      </tr>
+    </table>
+  </div>
+  <hr>
+  <h3>Graficki prikaz</h3>
+  <div id="grafVrsta">
+    <canvas  id="pieChart" align="center"></canvas>
+  </div>
+</div>
+        
+<div id="mjesec" class="tabcontent">
+    <h3>Prosjek gostiju po mjesecu</h3>
+    <div align="center">
+    <table class="table table-striped" id="tablica">
+      <tr>
+        <th>Prosjek gostiju</th>
+        <td>{{prosjekGostiju}}</td>
+      </tr>
+      <tr>
+        <th>Ozujak</th>
+        <td>{{prosjekGostijuPoMjesecu[0]}}</td>
+      </tr>
+      <tr>
+        <th>Travanj</th>
+        <td>{{prosjekGostijuPoMjesecu[1]}}</td>
+      </tr>
+      <tr>
+        <th>Svibanj</th>
+        <td>{{prosjekGostijuPoMjesecu[2]}}</td>
+      </tr>
+      <tr>
+        <th>Lipanj</th>
+        <td>{{prosjekGostijuPoMjesecu[3]}}</td>
+      </tr>
+      <tr>
+        <th>Srpanj</th>
+        <td>{{prosjekGostijuPoMjesecu[4]}}</td>
+      </tr>
+      <tr>
+        <th>Kolovoz</th>
+        <td>{{prosjekGostijuPoMjesecu[5]}}</td>
+      </tr>
+      <tr>
+        <th>Rujan</th>
+        <td>{{prosjekGostijuPoMjesecu[6]}}</td>
+      </tr>
+      <tr>
+        <th>Listopad</th>
+        <td>{{prosjekGostijuPoMjesecu[7]}}</td>
+      </tr>
+      <tr>
+        <th>Studeni</th>
+        <td>{{prosjekGostijuPoMjesecu[8]}}</td>
+      </tr>
+    </table>    
+  </div>
+  <hr>
+    <h3>Graficki prikaz</h3>
+    <div id="grafMjesec">
+        <canvas id="lineChart"  style="width: 101%" align="center"></canvas>
+    </div>
+</div>
+</body>

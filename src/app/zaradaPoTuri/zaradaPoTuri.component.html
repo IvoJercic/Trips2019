@@ -1,0 +1,107 @@
+<body>
+<div class="h1">
+    <a [routerLink]="['/menu']">
+      <button class="btn btn-dark" style="margin-left:30px;margin-right: 1px"><i class="fa fa-arrow-left"></i></button>
+    </a>
+    &nbsp;&nbsp;Zarada %&nbsp;
+</div>
+<hr>
+<div class="tab" align="center">
+  <button style="margin-left: 23%" class="tablinks" id="lblPoVrsti" (click)="openTab('vrsta')">Po vrsti</button>
+  <button  class="tablinks" id="lblPoMjesecu" (click)="openTab('mjesec')">Po mjesecu</button>
+</div>
+
+<div id="vrsta" class="tabcontent">
+  <h3>Prosjecna zarada po vrsti</h3>
+  <div align="center">
+    <table class="table table-striped" id="tablica">
+      <tr>
+        <th>Prosjecna zarada po turi</th>
+        <td>{{prosjekZarade+ " kn"}}</td>
+      </tr>
+      <tr>
+        <th>Canyoning (basic)</th>
+        <td>{{prosjekGostijuPoVrstiTure[0]+ " kn"}}</td>
+      </tr> 
+      <tr>
+        <th>Kayaking</th>
+        <td>{{prosjekGostijuPoVrstiTure[2]+ " kn"}}</td>
+      </tr>
+      <tr>
+        <th>Hiking</th>
+        <td>{{prosjekGostijuPoVrstiTure[3]+ " kn"}}</td>
+      </tr>
+      <tr>
+        <th>Cycling</th>
+        <td>{{prosjekGostijuPoVrstiTure[4]+ " kn"}}</td>
+      </tr>
+      <tr>
+        <th>Canyoning (advanced)</th>
+        <td>{{prosjekGostijuPoVrstiTure[1]+ " kn"}}</td>
+      </tr>
+      <tr>
+        <th>Rock climbing</th>
+        <td>{{prosjekGostijuPoVrstiTure[5]+ " kn"}}</td>
+      </tr>
+    </table>
+  </div>
+  <hr>
+  <h3>Graficki prikaz</h3>
+  <div id="grafVrsta">
+    <canvas  id="pieChart" align="center"></canvas>
+  </div>
+</div>
+        
+<div id="mjesec" class="tabcontent">
+    <h3>Prosjecna zarada po mjesecu</h3>
+    <div align="center">
+    <table class="table table-striped" id="tablica">
+      <tr>
+        <th>Prosjecna zarada po turi</th>
+        <td>{{prosjekZarade + " kn"}}</td>
+      </tr>
+      <tr>
+        <th>Ozujak</th>
+        <td>{{prosjekZaradePoMjesecu[0]+ " kn"}}</td>
+      </tr>
+      <tr>
+        <th>Travanj</th>
+        <td>{{prosjekZaradePoMjesecu[1]+ " kn"}}</td>
+      </tr>
+      <tr>
+        <th>Svibanj</th>
+        <td>{{prosjekZaradePoMjesecu[2]+ " kn"}}</td>
+      </tr>
+      <tr>
+        <th>Lipanj</th>
+        <td>{{prosjekZaradePoMjesecu[3]+ " kn"}}</td>
+      </tr>
+      <tr>
+        <th>Srpanj</th>
+        <td>{{prosjekZaradePoMjesecu[4]+ " kn"}}</td>
+      </tr>
+      <tr>
+        <th>Kolovoz</th>
+        <td>{{prosjekZaradePoMjesecu[5]+ " kn"}}</td>
+      </tr>
+      <tr>
+        <th>Rujan</th>
+        <td>{{prosjekZaradePoMjesecu[6]+ " kn"}}</td>
+      </tr>
+      <tr>
+        <th>Listopad</th>
+        <td>{{prosjekZaradePoMjesecu[7]+ " kn"}}</td>
+      </tr>
+      <tr>
+        <th>Studeni</th>
+        <td>{{prosjekZaradePoMjesecu[8]+ " kn"}}</td>
+      </tr>
+    </table>    
+  </div>
+  <hr>
+    <h3>Graficki prikaz</h3>
+    <div id="grafMjesec">
+        <canvas id="lineChart"  style="width: 101%" align="center"></canvas>
+    </div>
+</div>
+</body>

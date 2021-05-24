@@ -1,0 +1,36 @@
+<html>
+  <head>
+  </head>
+  <body>
+<div style="background-color:black"><!--Div postavljen isključivo da cila pozadina bez rupa bude obojana-->
+  <div id="traka" align="center">Prijavljeni ste kao: {{trenutnoPrijavljen}}</div>
+  <div class="h1">
+    <a [routerLink]="['/unos']"><button class="btn btn-success" style="width:40px;height:40px;margin-right:20px"><i class="fa fa-plus-square"></i></button></a>
+    TRIPS 2021. 
+    <button class="btn btn-success" (click)="odjava()" style="width:40px;height:40px;margin-left:20px"><i class="fa fa-sign-out"></i></button>
+  </div>
+
+    <div style="text-align:center;color:#ffc107;font-size: 23px"><p>Datum: {{danasnjiDatum| date: 'dd/MM/yyyy'}}</p></div>
+
+    <div id="app" align:center>
+    <button [routerLink]="['/ture']" class="btn btn-warning" style="width:45%;margin:2px"><p class="brojevi" style="font-size:250%;">{{ukupnoTura}}</p><p class="botun">Ukupno tura</p></button> &nbsp;
+    <button [routerLink]="['/duple']" class="btn btn-success" style="width:45%;margin:2px"><p class="brojevi" style="font-size:250%;">{{duplihTura}}</p><p class="botun">Duplih tura</p></button>
+    <br>
+    <button [routerLink]="['/gosti']" class="btn btn-success" style="width:45%;margin:2px"><p class="brojevi" style="font-size:250%;">{{ukupnoGostiju}}</p><p class="botun">Ukupno gostiju</p></button>&nbsp;&nbsp;
+    <button [routerLink]="['/gostiPoTuri']" class="btn btn-warning" style="width:45%;margin:2px"><p class="brojevi" style="font-size:250%;">{{gostijuPoTuri}}</p><p class="botun">Gostiju po turi</p></button>
+    <br>
+    <button [routerLink]="['/placa']" class="btn btn-warning" style="width:45%;margin:2px"><p class="brojevi" style="font-size:250%;">{{placa}} kn</p><p class="botun">Placa</p></button>&nbsp;&nbsp;
+    <button [routerLink]="['/baksis']" class="btn btn-success" style="width:45%;margin:2px"><p class="brojevi" style="font-size:250%;">{{baksis}} kn</p><p class="botun">Baksis</p></button>
+    <br>
+    <button [routerLink]="['/slike']" class="btn btn-success" style="width:45%;margin:2px"><p class="brojevi" style="font-size:250%;">{{slike}} kn</p><p class="botun">Slike</p></button>&nbsp;&nbsp;
+    <button [routerLink]="['/voznja']" class="btn btn-warning" style="width:45%;margin:2px"><p class="brojevi" style="font-size:250%;">{{voznja}} kn</p><p class="botun">Voznja</p></button>
+    <br>
+    <button [routerLink]="['/zarada']" class="btn btn-warning" style="width:45%;margin:2px"><p class="brojevi" style="font-size:250%;">{{ukupnaZarada}} kn</p><p class="botun">Ukupna zarada</p></button>&nbsp;&nbsp;
+    <button [routerLink]="['/zaradaPoTuri']" class="btn btn-success" style="width:45%;margin:2px"><p class="brojevi" style="font-size:250%;">{{zaradaPoTuri}} kn</p><p class="botun">Zarada po turi</p></button>
+    <br>
+    <button [routerLink]="['/kolege']" class="btn btn-success" style="width:45%;margin:2px"><p class="brojevi" style="font-size:250%;">{{kolege}}</p><p class="botun">Kolege</p></button>&nbsp;&nbsp;
+    <button [routerLink]="['/izvlacenja']" class="btn btn-warning" style="width:45%;margin:2px"><p class="brojevi" style="font-size:250%;">{{izvlacenja}}</p><p class="botun">Izvlacenja</p></button>
+    </div>
+</div> 
+</body>
+</html>
